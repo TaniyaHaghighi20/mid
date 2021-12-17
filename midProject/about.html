@@ -1,0 +1,377 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfold</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="style/mainStyle.css">
+</head>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('.slider :nth-last-of-type('+2+')').hide();
+        $('#last-div').hide();
+        $('.slider :nth-last-of-type('+3+')').hide();
+        // left
+        var sec=3;
+        var first =6;
+        $(".left").click(function () {
+            // alert("The paragraph was clicked.");
+            console.log(first);
+            console.log(sec);
+            if(first==6 && sec!=3){
+                console.log("sec");
+                $('#first-child').fadeIn(1000)
+                .css('right', function(){ return $(this).hide().right; })
+             .animate({"right":"0px"}, "slow"); 
+
+                $('.slider :nth-last-of-type('+sec+')').hide()
+                .css('right', function(){ return $(this).offset().right; })
+             .animate({"right":"0px"}, "slow"); ;
+
+                first++;
+                sec++;
+            }
+            else if(first<6){
+                first++;
+                sec++;
+                $('.slider :nth-last-of-type('+(first)+')').fadeIn(1000)
+                .css('right', function(){ return $(this).offset().right; })
+             .animate({"right":"0px"}, "slow"); ;
+
+                $('.slider :nth-last-of-type('+(sec)+')').hide()
+                .css('right', function(){ return $(this).offset().right; })
+             .animate({"right":"0px"}, "slow"); ;
+
+               
+            }
+            console.log(first);
+            console.log(sec);
+            
+
+        });
+        // right
+        $(".right").click(function () {
+            console.log(first);
+            console.log(sec);
+            if(sec==3){
+                $('.slider :nth-last-of-type('+sec+')').fadeIn(1000).css('left', function(){ return $(this).offset().left; })
+             .animate({"left":"0px"}, "slow"); ;
+                $('#first-child').hide().css('left', function(){ return $(this).offset().left; })
+             .animate({"left":"0px"}, "slow"); ;
+                first--;
+                sec--;
+            }else
+            if(sec<6 && sec>1){
+                 $('.slider :nth-last-of-type('+sec+')').fadeIn(1000).css('left', function(){ return $(this).offset().left; })
+             .animate({"left":"0px"}, "slow"); ;
+                 $('.slider :nth-last-of-type('+(first)+')').hide().css('left', function(){ return $(this).offset().left; })
+             .animate({"left":"0px"}, "slow"); ;
+                 first--;
+                sec--;
+            }
+            console.log(first);
+            console.log(sec);
+
+        });
+
+    });
+</script>
+
+<body>
+
+
+    <ul class="nav nav-pills navbar-dark bg-dark justify-content-around bg-black " id="pills-tab" role="tablist">
+        <li class="nav-item " role="presentation">
+            <a class="navbar-brand font-weight-bold"><img class="img-fluid" src="images/logo.png" alt="logo"
+                    style="width: 150px;"></a>
+        </li>
+
+        <ul class="nav nav-pills navbar-dark bg-dark  align-items-center d-flex bg-black" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  h-100  text-white navBtn p-3 px-4" href="../midProject/index.html" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active h-100  text-white navBtn p-3 px-4" href="#" role="tab"
+                    aria-controls="pills-about" aria-selected="false">About</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <!-- data-toggle="pill" -->
+                <a class="nav-link  h-100  text-white navBtn text-center p-3 px-4" href="../midProject/blog.html"
+                    role="tab" aria-controls="pills-blog" aria-selected="false">Blog</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  h-100  text-white navBtn p-3 px-4" href="../midProject/contact.html" role="tab"
+                    aria-controls="pills-contact" aria-selected="false">Contact</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  p-1 rounded-circle twitt  text-white mx-1" data-toggle="pill" href="#pills-twitt"
+                    role="tab" aria-controls="pills-twitt" aria-selected="false"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  p-1 rounded-circle drib  text-white text-center mx-1" data-toggle="pill"
+                    href="#pills-drib" role="tab" aria-controls="pills-drib" aria-selected="false"><i
+                        class="fab fa-dribbble"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  p-1 rounded-circle insta  text-white mx-1" data-toggle="pill" href="#pills-insta"
+                    role="tab" aria-controls="pills-insta" aria-selected="false"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </ul>
+
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="display-3 introduction">A little bit about me and how I became the designer I am today</h1>
+        </div>
+
+        <div class="col-sm-0.2">
+            <a class="p-1 rounded-circle  text-white mx-1 right border-0 float-right"><i
+                class="fas fa-arrow-right"></i></a>
+            <a class="p-1 rounded-circle text-white mx-1 left border-0 float-right"><i
+                    class="fas fa-arrow-left"></i></a>
+           
+        </div>
+
+        <div class="row slider">
+            <div class="card my-1 mr-1 border-0 col-sm-3" id="first-child">
+                <a class="d-flex justify-content-center  text-white bg-black rounded-circle about-icon mb-4">
+                    <i class="fas fa-user-plus"></i>
+                </a>
+                <div class="box arrow-top">
+                    <h5 class="card-title"><span style="font-weight: bold;">Birth</span></h5>
+
+                    <p class="light-grey-text">Birth
+                        I was born in a small town in Texas called Lorem.
+                        Ipsum dolor sit amet, consectetuer adipiscing elitdolor sit.
+                        Aenean commodo ligula eget dolor.</p>
+                </div>
+            </div>
+            <div class="card my-1 mr-1 border-0 col-sm-3">
+                <a class="d-flex justify-content-center  text-white bg-black rounded-circle about-icon mb-4">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <div class="box arrow-top">
+                    <h5 class="card-title"><span style="font-weight: bold;">First Steps</span></h5>
+
+                    <p class="light-grey-text">
+                        I took my first steps in enim justo, rhoncus ut, imperdiet a, dolor sit
+                        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                        tincidunt.</p>
+                </div>
+
+            </div>
+
+            <div class="card my-1 mr-1 border-0 col-sm-3">
+                <a class="d-flex justify-content-center  text-white bg-black rounded-circle about-icon mb-4">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <div class="box arrow-top">
+                    <h5 class="card-title"><span style="font-weight: bold;">College</span></h5>
+
+                    <p class="light-grey-text">College
+                        I started college in 2001. Aenean leo ligula, porttitor eu, consequat vitae,
+                        eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                        tellus.</p>
+                </div>
+            </div>
+
+
+
+            <div class="card my-1 mr-1 border-0 col-sm-3">
+                <a class=" d-flex justify-content-center text-white bg-black rounded-circle about-icon mb-4"> <i
+                        class="fas fa-paint-brush"></i>
+                </a>
+                <div class="box arrow-top">
+                    <h5 class="card-title"><span style="font-weight: bold;">Art Degree</span></h5>
+
+                    <p class="light-grey-text">Art Degree
+                        My first art degree I received in ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                </div>
+            </div>
+
+            <div class="card my-1 mr-1 border-0 col-sm-3">
+                <a class="d-flex justify-content-center  text-white bg-black rounded-circle about-icon mb-4"> <i
+                        class="fas fa-wrench"></i>
+                </a>
+
+                <div class="box arrow-top">
+                    <h5 class="card-title"><span style="font-weight: bold;">Self Employment</span></h5>
+
+                    <p class="light-grey-text">
+                        Cras dapibus. Vivamus elementum semper nisi. Uat vitae, eleifend ac, enim. Aliquam lorem
+                        ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                </div>
+            </div>
+
+            <div class="card my-1 mr-1 border-0 col-sm-3" id="last-div">
+
+                <a class="d-flex justify-content-center  text-white bg-black rounded-circle about-icon mb-4"> <i
+                        class="fas fa-home"></i>
+                </a>
+                <div class="box arrow-top">
+                    <h5 class="card-title"><span style="font-weight: bold;">Founded my Company</span></h5>
+
+                    <p class="light-grey-text">
+                        Cras dapibus. Vivamus elementat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                        viverra quis, feugiat a, tellus.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+      
+       
+    </div>
+
+
+    <div class="row p-4">
+        <div class="col-sm m-4">
+            <h6 class="display-4">What I can do for you </h6>
+            <p class="light-grey-text">
+                Lorem ipsum dolor sit amet, consectetuer <span style="color: black;">adipiscing</span> elit. <br>
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                parturient <br>montes, nascetur ridiculus mus.
+
+                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                enim.</p>
+        </div>
+        <div class="col-sm m-4">
+            <h6 class="display-4">How i usually work </h6>
+            <p class="light-grey-text">
+
+                Donec quam felis, ultricies nec, pellentesque eu,
+                Lorem ipsum dolor sit amet, consectetuer <span style="color: black;">adipiscing</span> elit. <br>
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus.
+
+                Donec quam felis, ultricies nec, pellentesque eu,<br> pretium quis, sem. Nulla consequat massa quis
+                enim.</p>
+        </div>
+    </div>
+
+    <div class="row p-4">
+        <div class="col-sm m-4">
+            <h6 class="display-4">Skills </h6>
+            <p class="light-grey-text">
+                Lorem ipsum dolor sit amet, consectetuer <span style="color: black;">adipiscing</span> elit. <br>
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                parturient <br>montes, nascetur ridiculus mus.
+
+                Donec quam felis, ultricies nec, pellentesque eu, <span style="color: black;">pretium</span>pretium
+                quis, sem. Nulla consequat massa quis enim.</p>
+
+            <ul class="light-grey-text list">
+                <li>Nullam felis eu pede mollis pretium.</li>
+                <li>
+                    Integer tincidunt. Cras dapibusc onsectetuer adipiscing eli.
+                </li>
+                <li>Vivamus elementum semper nisi.</li>
+                <li> Lorem ipsum dolor sit amet. Aenean commodo ligula eget dolor.</li>
+            </ul>
+            <p class="light-grey-text">
+                Lorem ipsum dolor sit amet, consectetuer <span style="color: black;">adipiscing</span> elit. <br>
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                parturient <br>montes, nascetur ridiculus mus.
+
+                Donec quam felis, ultricies nec, pellentesque eu, <span style="color: black;">pretium</span>pretium
+                quis, sem. Nulla consequat massa quis enim.</p>
+        </div>
+        <div class="col-sm m-4">
+            <h6 class="mt-5">Logo Design </h6>
+            <div class="progress bg-grey text-dark mt-3 mb-3" style="height:5px">
+                <div class="progress-bar bg-dark" style="width:50%;height:10px"></div>
+            </div>
+            <h6>Brand Design </h6>
+            <div class="progress bg-grey text-dark mt-3 mb-3" style="height:5px">
+                <div class="progress-bar bg-dark" style="width:40%;height:10px"></div>
+            </div>
+            <h6>Web Design </h6>
+            <div class="progress bg-grey text-dark mt-3 mb-3" style="height:5px">
+                <div class="progress-bar bg-dark" style="width:90%;height:10px"></div>
+            </div>
+            <h6>Content Creation </h6>
+            <div class="progress bg-grey text-dark mt-3 mb-3" style="height:5px">
+                <div class="progress-bar bg-dark" style="width:60%;height:10px"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center pad-bottom">
+        <ul>
+            <li class="bg-dark rounded-circle p-2 m-2 " role="presentation">
+                <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                    data-placement="top" title="Follow me on twitter" href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li class="bg-dark rounded-circle p-2 m-2 " role="presentation">
+                <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                    data-placement="top" title="Follow me on facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+
+            <li class="bg-dark rounded-circle p-2 m-2 " role="presentation">
+                <a class="p-1   text-white text-center d-flex justify-content-center contact-icons"
+                    data-toggle="tooltip" data-placement="top" title="Follow me on dribble" href="#"><i
+                        class="fab fa-dribbble"></i></a>
+            </li>
+            <li class="bg-dark rounded-circle p-2 m-2 " role="presentation">
+                <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                    data-placement="top" title="Follow me on instagram" href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="bg-dark rounded-circle p-2 m-2 " role="presentation">
+                <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                    data-placement="top" title="Follow me on linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="bg-dark rounded-circle p-2 m-2  " role="presentation">
+                <a class=" p-1   text-white d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                    data-placement="top" title="Get in touch" href="#"><i class="fas fa-envelope"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row  d-flex justify-content-center">
+        <div>
+            <h6 class="grey-text d-flex justify-content-center pad-sm-bottom">Subscribe</h6>
+            <h6 class="light-grey-text d-flex justify-content-center pad-sm-bottom">Get our latest news, tips and tricks
+            </h6>
+            <form class="form-inline  d-flex justify-content-center pad-sm-bottom">
+                <div class="form-group mx-sm-3 mb-2 ">
+                    <input type="password" class="form-control input" id="inputPassword2" placeholder="@Email">
+                </div>
+                <button type="submit" class="btn submitBtn mb-2">Submit</button>
+            </form>
+            <div class="pad-sm-bottom d-flex justify-content-center">
+                <a class="light-grey-text px-1" href="#"><small>About</small> </a>
+                <span class="pr-2 pl-2" style="color: grey;"> <small>|</small> </span>
+                <a class="light-grey-text px-1" href="#"> <small>Imprint</small> </a>
+                <span class="pr-2 pl-2" style="color: grey;"> <small>|</small> </span>
+                <a class="light-grey-text px-1" href="#"> <small>Contact</small> </a>
+                <span class="pr-2 pl-2" style="color: grey;"> <small>|</small> </span>
+                <a class="light-grey-text px-1" href="#"> <small> Privacy Policy</small></a>
+            </div>
+            <div class="pad-sm-bottom d-flex justify-content-center">
+                <a class="light-grey-text pr-3" href="#"><small>© 2018 Enfold by Kriesi</small> </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

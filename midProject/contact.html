@@ -1,0 +1,187 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfold</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="style/mainStyle.css">
+</head>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+<body>
+    <ul class="nav nav-pills navbar-dark bg-dark justify-content-around bg-black " id="pills-tab" role="tablist">
+        <li class="nav-item " role="presentation">
+            <a class="navbar-brand font-weight-bold"><img class="img-fluid" src="images/logo.png" alt="logo"
+                    style="width: 150px;"></a>
+        </li>
+
+        <ul class="nav nav-pills navbar-dark bg-dark  align-items-center d-flex bg-black" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  h-100  text-white navBtn p-3 px-4" href="../midProject/index.html" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  h-100  text-white navBtn p-3 px-4" href="../midProject/about.html" role="tab"
+                    aria-controls="pills-about" aria-selected="false">About</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <!-- data-toggle="pill" -->
+                <a class="nav-link  h-100  text-white navBtn text-center p-3 px-4" href="../midProject/blog.html"
+                    role="tab" aria-controls="pills-blog" aria-selected="false">Blog</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active h-100  text-white navBtn p-3 px-4" data-toggle="pill" href="#pills-contact"
+                    role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  p-1 rounded-circle twitt  text-white mx-1" data-toggle="pill" href="#pills-twitt"
+                    role="tab" aria-controls="pills-twitt" aria-selected="false"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  p-1 rounded-circle drib  text-white text-center mx-1" data-toggle="pill"
+                    href="#pills-drib" role="tab" aria-controls="pills-drib" aria-selected="false"><i
+                        class="fab fa-dribbble"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link  p-1 rounded-circle insta  text-white mx-1" data-toggle="pill" href="#pills-insta"
+                    role="tab" aria-controls="pills-insta" aria-selected="false"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </ul>
+
+    <div class="container-fluid main-text">
+        <div class="row mb-5">
+            <h1 class="display-3 introduction">Contact – Get in touch! I am currently available for contract work</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h6 class="display-4">I am located in </h6>
+                <p class="light-grey-text">
+                    </pclass><span style="color: black;">Main Street 1, Williamsville</span> <br>
+
+                    Buffalo, USA
+                </p><br>
+                <p class="light-grey-text"><span style="color: black;">office@enfold-minimal.com</span> <br>
+
+                    +555 283 784 333
+                </p><br>
+
+                <p class="light-grey-text">
+                    Lorem ipsum dolor sit amet, consectetuer <span style="color: black;">adipiscing</span> elit. <br>
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. <br>
+
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                    enim.</p><br>
+            </div>
+            <div class="col-sm">
+                <h6 class="display-4">Feel free to drop me a mail </h6>
+                <form>
+                    <div class="form-row mb-4 mx-0">
+                        <div class="col">
+                            <input type="text" class="form-control contact-input" placeholder="Name*">
+                        </div>
+                        <div class="col ">
+                            <input type="text" class="form-control contact-input " placeholder="Email*">
+                        </div>
+                    </div>
+                    <div class="form-row ">
+                        <textarea class="form-control contact-input" id="exampleFormControlTextarea1"
+                            placeholder="Message*" rows="7"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button
+                            class="bg-black text-light mt-4 px-5 border-0 py-2 contact-submit rounded">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</div>
+<div class="row mt-5 mb-4 w-100">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93532.55571282294!2d-78.93448226424339!3d42.896217602981004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d3126152dfe5a1%3A0x982304a5181f8171!2sBuffalo%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1639734362058!5m2!1sen!2s"
+        class="mt-5" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+      <div class="container-fluid">
+
+
+        <div class="row d-flex justify-content-center pad-bottom">
+            <ul>
+                <li class="bg-dark rounded-circle p-2 m-2" role="presentation">
+                    <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                        data-placement="top" title="Follow me on twitter" href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+
+                <li class="bg-dark rounded-circle p-2 m-2" role="presentation">
+                    <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                        data-placement="top" title="Follow me on facebook" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                </li>
+
+                <li class="bg-dark rounded-circle p-2 m-2" role="presentation">
+                    <a class="p-1   text-white text-center d-flex justify-content-center contact-icons"
+                        data-toggle="tooltip" data-placement="top" title="Follow me on dribble" href="#"><i
+                            class="fab fa-dribbble"></i></a>
+                </li>
+                <li class="bg-dark rounded-circle p-2 m-2" role="presentation">
+                    <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                        data-placement="top" title="Follow me on instagram" href="#"><i
+                            class="fab fa-instagram"></i></a>
+                </li>
+                <li class="bg-dark rounded-circle p-2 m-2" role="presentation">
+                    <a class=" p-1    text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                        data-placement="top" title="Follow me on linkedin" href="#"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="bg-dark rounded-circle p-2 m-2" role="presentation">
+                    <a class=" p-1   text-white  d-flex justify-content-center contact-icons" data-toggle="tooltip"
+                        data-placement="top" title="Get in touch" href="#"><i class="fas fa-envelope"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row  d-flex justify-content-center">
+            <div>
+                <h6 class="grey-text d-flex justify-content-center pad-sm-bottom">Subscribe</h6>
+                <h6 class="light-grey-text d-flex justify-content-center pad-sm-bottom">Get our latest news, tips and
+                    tricks</h6>
+                <form class="form-inline  d-flex justify-content-center pad-sm-bottom">
+                    <div class="form-group mx-sm-3 mb-2 ">
+                        <input type="password" class="form-control input" id="inputPassword2" placeholder="@Email">
+                    </div>
+                    <button type="submit" class="btn submitBtn mb-2">Submit</button>
+                </form>
+                <div class="pad-sm-bottom d-flex justify-content-center">
+                    <a class="light-grey-text px-1" href="#"><small>About</small> </a>
+                    <span class="pr-2 pl-2" style="color: grey;"> <small>|</small> </span>
+                    <a class="light-grey-text px-1" href="#"> <small>Imprint</small> </a>
+                    <span class="pr-2 pl-2" style="color: grey;"> <small>|</small> </span>
+                    <a class="light-grey-text px-1" href="#"> <small>Contact</small> </a>
+                    <span class="pr-2 pl-2" style="color: grey;"> <small>|</small> </span>
+                    <a class="light-grey-text px-1" href="#"> <small> Privacy Policy</small></a>
+                </div>
+                <div class="pad-sm-bottom d-flex justify-content-center">
+                    <a class="light-grey-text pr-3" href="#"><small>© 2018 Enfold by Kriesi</small> </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+
+</html>
